@@ -1,0 +1,73 @@
+{
+  "name": "@your-org/decision-tree-model",
+  "version": "1.0.0",
+  "description": "A TypeScript toolkit for training, persisting, loading, and inferring high-performance decision-tree models using XGBoost",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run build:cjs && npm run build:esm && npm run build:types",
+    "build:cjs": "tsc --project tsconfig.json",
+    "build:esm": "tsc --project tsconfig.esm.json",
+    "build:types": "tsc --project tsconfig.types.json",
+    "clean": "rimraf dist",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "docs": "typedoc src/index.ts --out docs",
+    "prepublishOnly": "npm run build && npm run test && npm run lint"
+  },
+  "keywords": [
+    "xgboost",
+    "decision-tree",
+    "machine-learning",
+    "classification",
+    "typescript",
+    "feature-hashing",
+    "ml"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "@fractal-solutions/xgboost-js": "^1.0.0",
+    "graphql": "^16.11.0",
+    "graphql-request": "^7.2.0",
+    "murmurhash3js": "^3.0.1",
+    "papaparse": "^5.4.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/murmurhash3js": "^3.0.7",
+    "@types/node": "^18.15.0",
+    "@types/papaparse": "^5.3.7",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^29.5.0",
+    "prettier": "^2.8.7",
+    "rimraf": "^4.4.1",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "typedoc": "^0.23.28",
+    "typescript": "^5.0.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/decision-tree-model.git"
+  },
+  "bugs": {
+    "url": "https://github.com/your-org/decision-tree-model/issues"
+  },
+  "homepage": "https://github.com/your-org/decision-tree-model#readme"
+}

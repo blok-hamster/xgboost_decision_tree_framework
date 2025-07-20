@@ -1,0 +1,12 @@
+.cursor/
+data-extraction/
+models/
+node_modules/
+.env
+.env.local
+# .env.development.local
+# .env.test.local
+.env.production.local
+IMPLEMENTATION_STATUS.md
+README_KOL_CLASSIFICATION.md
+
