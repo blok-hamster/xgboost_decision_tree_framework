@@ -16,6 +16,7 @@ import {
   Model,
   DataLoader,
   defaultLogger,
+  RawDataRecord,
 } from './src';
 import * as fs from 'fs';
 
@@ -225,8 +226,11 @@ async function testKolClassifier(): Promise<void> {
         const testSample = testData.slice(0, sampleSize);
         //console.log("testSample", testSample[3]);
         console.log(`Testing on ${sampleSize} records from dataset...`);
+        //console.log("testSample", testSample[16]);
         
-        const batchResult = model.predictBatch(testSample);
+        const batchResult = model.predictBatch(testSample as RawDataRecord[]);
+        const singleResult = model.predictWithProbabilities(testSample[24] as RawDataRecord);
+        console.log("singleResult", singleResult);
         //console.log("batchResult", batchResult);
         
         console.log(`\n📈 Batch Prediction Results:`);
@@ -246,6 +250,7 @@ async function testKolClassifier(): Promise<void> {
         const classDistribution: { [key: string]: number } = {};
         batchResult.forEach(prediction => {
           const predStr = String(prediction);
+          //console.log("predStr", predStr);
           const readableLabel = labelMap[predStr] || predStr;
           classDistribution[readableLabel] = (classDistribution[readableLabel] || 0) + 1;
         });
