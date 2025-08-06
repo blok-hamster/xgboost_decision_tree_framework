@@ -1,10 +1,11 @@
 {
-  "name": "@your-org/decision-tree-model",
+  "name": "@inscribable/xg_boost_decision_tree_model",
   "version": "1.0.0",
   "description": "A TypeScript toolkit for training, persisting, loading, and inferring high-performance decision-tree models using XGBoost",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "author": "blok_hamster",
   "files": [
     "dist"
   ],
@@ -32,7 +33,6 @@
     "feature-hashing",
     "ml"
   ],
-  "author": "Your Name",
   "license": "MIT",
   "dependencies": {
     "@fractal-solutions/xgboost-js": "^1.0.0",
@@ -64,10 +64,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-org/decision-tree-model.git"
+    "url": "https://github.com/blok-hamster/xgboost_decision_tree_framework"
   },
   "bugs": {
-    "url": "https://github.com/your-org/decision-tree-model/issues"
+    "url": "https://github.com/blok-hamster/xgboost_decision_tree_framework/issues"
   },
-  "homepage": "https://github.com/your-org/decision-tree-model#readme"
+  "homepage": "https://github.com/blok-hamster/xgboost_decision_tree_framework#readme"
 }

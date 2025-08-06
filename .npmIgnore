@@ -9,4 +9,5 @@ node_modules/
 .env.production.local
 IMPLEMENTATION_STATUS.md
 README_KOL_CLASSIFICATION.md
+/examples
 

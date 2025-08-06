@@ -15,7 +15,7 @@ A comprehensive TypeScript toolkit for training, persisting, loading, and inferr
 ## 📦 Installation
 
 ```bash
-npm install @blok_hamster/xg_boost_decision_tree_model
+npm install @inscribable/xg_boost_decision_tree_model
 ```
 
 ## 🎯 Quick Start
@@ -23,7 +23,7 @@ npm install @blok_hamster/xg_boost_decision_tree_model
 ### Basic Binary Classification
 
 ```typescript
-import { Trainer, Model, FeatureAnalyzer } from '@blok_hamster/xg_boost_decision_tree_model';
+import { Trainer, Model, FeatureAnalyzer } from '@inscribable/xg_boost_decision_tree_model';
 
 // Sample data
 const data = [
@@ -90,7 +90,7 @@ console.log('Probabilities:', probabilities); // [0.2, 0.8] (probability for eac
 ### Multi-class Classification
 
 ```typescript
-import { Trainer, Model } from '@blok_hamster/xg_boost_decision_tree_model';
+import { Trainer, Model } from '@inscribable/xg_boost_decision_tree_model';
 
 const data = [
   { feature1: 'A', feature2: 'X', numeric1: 1.5, category: 'cat' },
@@ -123,7 +123,7 @@ console.log('Predicted class:', result); // 0, 1, or 2 (class index)
 ### Loading Data from CSV
 
 ```typescript
-import { Trainer } from '@blok_hamster/xg_boost_decision_tree_model';
+import { Trainer } from '@inscribable/xg_boost_decision_tree_model';
 
 const trainer = new Trainer({
   categoricalFeatures: ['brand', 'category'],
@@ -158,7 +158,7 @@ console.log('Model metrics:', metrics);
 Converts categorical features to numerical vectors using deterministic hashing:
 
 ```typescript
-import { HashEncoder } from '@blok_hamster/xg_boost_decision_tree_model';
+import { HashEncoder } from '@inscribable/xg_boost_decision_tree_model';
 
 const encoder = new HashEncoder(100, 42, 'color_feature');
 
@@ -176,7 +176,7 @@ console.log('Is deterministic:', isDeterministic); // true
 Analyzes datasets to determine optimal feature specifications:
 
 ```typescript
-import { FeatureAnalyzer } from '@blok_hamster/xg_boost_decision_tree_model';
+import { FeatureAnalyzer } from '@inscribable/xg_boost_decision_tree_model';
 
 const analyzer = new FeatureAnalyzer();
 
@@ -195,7 +195,7 @@ console.log('Feature correlations:', correlations);
 Handles the complete training pipeline:
 
 ```typescript
-import { Trainer } from '@blok_hamster/xg_boost_decision_tree_model';
+import { Trainer } from '@inscribable/xg_boost_decision_tree_model';
 
 const trainer = new Trainer({
   categoricalFeatures: ['brand', 'color'],
@@ -235,7 +235,7 @@ console.log('Confusion Matrix:', metrics.confusionMatrix);
 Handles model loading and inference:
 
 ```typescript
-import { Model } from '@blok_hamster/xg_boost_decision_tree_model';
+import { Model } from '@inscribable/xg_boost_decision_tree_model';
 
 const model = await Model.load('./models/my_model');
 
@@ -262,7 +262,7 @@ The toolkit includes comprehensive tree visualization capabilities to help you u
 ### Basic Usage
 
 ```typescript
-import { createRegressionTrainer, Model } from '@blok_hamster/xg_boost_decision_tree_model';
+import { createRegressionTrainer, Model } from '@inscribable/xg_boost_decision_tree_model';
 
 // Train a model
 const trainer = createRegressionTrainer(['location', 'type'], ['area', 'age'], 'price');
@@ -387,7 +387,7 @@ const viz = trainer.visualizeTree('text', {
 
 #### Direct TreeVisualizer Usage
 ```typescript
-import { TreeVisualizer } from '@blok_hamster/xg_boost_decision_tree_model';
+import { TreeVisualizer } from '@inscribable/xg_boost_decision_tree_model';
 
 const featureNames = ['feature1', 'feature2', 'feature3'];
 const visualizer = new TreeVisualizer(featureNames);
@@ -455,7 +455,7 @@ const trainer = new Trainer({
 ### Feature Hashing Configuration
 
 ```typescript
-import { HashEncoder } from '@blok_hamster/xg_boost_decision_tree_model';
+import { HashEncoder } from '@inscribable/xg_boost_decision_tree_model';
 
 // Custom bucket count and seed
 const encoder = new HashEncoder(
@@ -517,7 +517,7 @@ console.log('Features:', metadata.categoricalFeatures, metadata.numericFeatures)
 ### Unit Testing
 
 ```typescript
-import { HashEncoder } from '@blok_hamster/xg_boost_decision_tree_model';
+import { HashEncoder } from '@inscribable/xg_boost_decision_tree_model';
 
 describe('HashEncoder', () => {
   test('should produce deterministic encodings', () => {
@@ -595,7 +595,7 @@ for (let i = 0; i < parsed.data.length; i += chunkSize) {
 ### Logging
 
 ```typescript
-import { Trainer, Logger, LogLevel } from '@blok_hamster/xg_boost_decision_tree_model';
+import { Trainer, Logger, LogLevel } from '@inscribable/xg_boost_decision_tree_model';
 
 // Custom logger
 const logger: Logger = {
