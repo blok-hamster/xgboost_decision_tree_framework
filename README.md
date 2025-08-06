@@ -676,4 +676,4 @@ See [CHANGELOG.md](CHANGELOG.md) for version history and updates.
 
 ---
 
-Made with ❤️ by the Decision Tree Model team 
+Made with ❤️ by blok_hamster
