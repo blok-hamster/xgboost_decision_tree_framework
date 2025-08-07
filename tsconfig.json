@@ -4,6 +4,7 @@
     "module": "CommonJS",
     "lib": ["ES2020", "DOM"],
     "outDir": "./dist",
+    "rootDir": "./src", 
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
@@ -35,13 +36,13 @@
   },
   "include": [
     "src/**/*",
-    "examples/**/*"
   ],
   "exclude": [
     "node_modules",
     "dist",
     "tests",
     "**/*.test.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "examples/**/*"
   ]
 } 

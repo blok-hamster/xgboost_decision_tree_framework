@@ -231,7 +231,7 @@ async function testKolClassifier(): Promise<void> {
         const batchResult = model.predictBatch(testSample as RawDataRecord[]);
         const singleResult = model.predictWithProbabilities(testSample[24] as RawDataRecord);
         const transformedResult = model.transform(testSample[24] as RawDataRecord);
-        //console.log("transformedResult", transformedResult);
+        console.log("transformedResult", transformedResult);
         console.log("singleResult", singleResult);
         //console.log("batchResult", batchResult);
         

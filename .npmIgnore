@@ -2,6 +2,7 @@
 data-extraction/
 models/
 node_modules/
+examples/
 .env
 .env.local
 # .env.development.local
