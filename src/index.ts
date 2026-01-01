@@ -5,11 +5,13 @@
  * decision tree models with support for both classification and regression.
  */
 
+
 // Core components
 export { HashEncoder } from './core/HashEncoder';
 export { FeatureAnalyzer } from './core/FeatureAnalyzer';
 export { Trainer } from './core/Trainer';
 export { Model } from './core/Model';
+export { FeatureExtractor } from './core/FeatureExtractor';
 export { TreeVisualizer } from './utils/TreeVisualizer';
 
 // Utilities

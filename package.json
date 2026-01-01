@@ -1,6 +1,6 @@
 {
   "name": "@inscribable/xg_boost_decision_tree_model",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A TypeScript toolkit for training, persisting, loading, and inferring high-performance decision-tree models using XGBoost",
   "main": "dist/index.js",
   "module": "dist/esm/index.js",

@@ -98,12 +98,9 @@ export class Model {
     logger?.info('Loading model from directory', { directory });
     
     const fs = require('fs');
-    
-    // Check if directory exists
     if (!fs.existsSync(directory)) {
       throw new Error(`Model directory not found: ${directory}`);
     }
-    
     // Load metadata
     const metadataPath = `${directory}/metadata.json`;
     if (!fs.existsSync(metadataPath)) {

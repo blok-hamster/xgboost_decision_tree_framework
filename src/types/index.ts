@@ -437,6 +437,34 @@ export interface ClassificationTrainingConfig extends TrainingConfig {
 export * from './index';
 
 /**
+ * OHLCV Candle structure for feature extraction
+ */
+export interface Candle {
+  timestamp: number; // Seconds
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+  volume: number;
+  market_cap?: number; // Estimated market cap
+}
+
+/**
+ * Advanced features calculated from OHLCV data
+ */
+export interface AdvancedFeatures {
+  rvol: number;
+  k_percentage: number;
+  d_percentage: number;
+  natr: number;
+  vwap_deviation: number;
+  upper_wick_ratio: number;
+  lower_wick_ratio: number;
+  market_cap: number;
+  visible_token_age: number; // Hours of data available before buy
+}
+
+/**
  * Tree node structure for visualization
  */
 export interface TreeNode {

@@ -2,23 +2,23 @@
 
 A comprehensive TypeScript toolkit for training, persisting, loading, and inferring high-performance decision-tree models using XGBoost. Features robust feature encoding, multi-class classification, model consistency, and smooth integration in production pipelines.
 
-## 🚀 Features
+## Features
 
-- **🔧 Feature Engineering**: Advanced hash-based categorical feature encoding with collision handling
-- **📊 Multi-class Classification**: Native XGBoost multi-class support with One-vs-Rest fallback
-- **🔒 Deterministic & Reproducible**: Consistent results across training and inference
-- **⚡ High Performance**: Optimized for <50ms inference per sample
-- **🌐 Cross-Platform**: Works in both Node.js and browser environments
-- **📝 TypeScript First**: Full type safety with comprehensive JSDoc documentation
-- **🧪 Production Ready**: Extensive testing, logging, and error handling
+- **Feature Engineering**: Advanced hash-based categorical feature encoding with collision handling
+- **Multi-class Classification**: Native XGBoost multi-class support with One-vs-Rest fallback
+- **Deterministic & Reproducible**: Consistent results across training and inference
+- **High Performance**: Optimized for <50ms inference per sample
+- **Cross-Platform**: Works in both Node.js and browser environments
+- **TypeScript First**: Full type safety with comprehensive JSDoc documentation
+- **Production Ready**: Extensive testing, logging, and error handling
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install @inscribable/xg_boost_decision_tree_model
 ```
 
-## 🎯 Quick Start
+## Quick Start
 
 ### Basic Binary Classification
 
@@ -151,7 +151,7 @@ const metrics = trainer.evaluate();
 console.log('Model metrics:', metrics);
 ```
 
-## 🧩 Core Components
+## Core Components
 
 ### 1. HashEncoder
 
@@ -489,7 +489,7 @@ console.log('Cross-validation scores:', metrics.crossValidationScores);
 console.log('Mean CV score:', metrics.crossValidationScores?.reduce((a, b) => a + b, 0) / metrics.crossValidationScores?.length);
 ```
 
-## 📊 Model Persistence
+## Model Persistence
 
 Models are saved with complete metadata for reproducibility:
 
@@ -512,7 +512,7 @@ console.log('Training date:', metadata.createdAt);
 console.log('Features:', metadata.categoricalFeatures, metadata.numericFeatures);
 ```
 
-## 🧪 Testing and Validation
+## Testing and Validation
 
 ### Unit Testing
 
@@ -552,7 +552,7 @@ const unseenData = { feature1: 'never_seen_before', feature2: 456 };
 const prediction = model.predict(unseenData); // Should work gracefully
 ```
 
-## 🚀 Performance Optimization
+## Performance Optimization
 
 ### Batch Processing
 
@@ -651,7 +651,7 @@ try {
 - **`Metrics`**: Model evaluation metrics
 - **`DataLoader`**: Data loading helpers
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch: `git checkout -b feature/new-feature`
@@ -659,18 +659,18 @@ try {
 4. Run tests: `npm test`
 5. Submit a pull request
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🔗 Links
+## Links
 
 - [Documentation](https://your-org.github.io/decision-tree-model/)
 - [API Reference](https://your-org.github.io/decision-tree-model/api/)
 - [Examples](https://github.com/your-org/decision-tree-model/tree/main/examples)
 - [Issues](https://github.com/your-org/decision-tree-model/issues)
 
-## 📈 Changelog
+## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for version history and updates.
 
