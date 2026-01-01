@@ -3,6 +3,7 @@ dist/
 data-extraction/
 models/
 node_modules/
+model-training-advanced/
 .env
 .env.local
 examples/
